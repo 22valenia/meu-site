@@ -1,83 +1,97 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Efectuar Compra</title>
     <link rel="stylesheet" href="po.css">
+
 </head>
+
 <body>
     <main class="container">
         <h2>Pó de Rosto</h2>
         <br><br>
-<form action="">
-    <div class="input-field">
-        <input type="text" name="username" id="username" placeholder="Nome do cliente">
-        <div class="underline"></div>
-    </div>
-    <br><br><br>
-    
-    <div class="campo">
-        <label form="username"><strong>Selecinar produto</strong></label>
-        <select id="preço" aria-required="">
-            <option ></option>
-            <option>Pó compacto #1</option>
-            <option>pó compacto #2</option>
-            <option>pó compacto#3</option>
-            
-            <br>
-            <br>
-            <br>
-            <form action="">
-                <div class="input-field">
-                    <input type="text" name="username" id="username" placeholder="Descrição do profuto">
-                    <div class="underline"></div>
-                </div>
-            
-            
-        </select>
-    </div>
-<br><br><br><br><br><br>
 
 
-    <div class="campo">
-        <label form="username"><strong>Selecionar quatidade</strong></label>
-        <select id="preço" aria-required="">
-            <option ></option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            
+        <script>
+            function buy (){
+                let nomeCliente = document.getElementById( 'cliente' ).value;
+                let produto = document.getElementById( 'produto' ).value;
+                let qtd = document.getElementById( 'qtd' ).value;
 
-        </select>
-    </div>
-    <br><br><br><br><br><br><br>
+                if ( produto === '' || qtd === '' ){
+                    console.log( produto );
+                    console.log( qtd );
+                    alert( 'Por favor, preencha os campos obrigatorio!' );
+                } else{
+                    alert( 'A compra de (' + qtd + ') produtos com o nome: ' + produto + ', foi realizado com sucesso!' );
+                }
 
-<div class="campo">
-    <label form="username"><strong>Selecionar preço</strong></label>
-    <select id="preço" aria-required="">
-        <option >3500kz</option>
-        
-    </select>
-</div>
+            }
+        </script>
 
-<br><br>
+        <form action="">
+            <div class="input-field">
+                <input type="text" name="username" id="cliente" placeholder="Nome do cliente">
+                <div class="underline"></div>
+            </div>
+            <br><br><br>
 
-<input type="submit" value="Comprar">
-<a href="./index.html" class="a">voltar</a>
+            <div class="campo">
+                <label form="username"><strong>Selecinar produto</strong></label>
+                <select id="produto" aria-required="">
+                    <option></option>
+                    <option>Pó compacto #1</option>
+                    <option>pó compacto #2</option>
+                    <option>pó compacto#3</option>
+
+                    <br>
+                    <br>
+                    <br>
+
+                </select>
+            </div>
+            <br><br><br><br><br><br>
 
 
+            <div class="campo">
+                <label form="username"><strong>Selecionar quatidade</strong></label>
+                <select id="qtd" aria-required="">
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
 
 
-</form>
+                </select>
+            </div>
+            <br><br><br><br><br><br><br>
+
+            <div class="campo">
+                <label form="username"><strong>Selecionar preço</strong></label>
+                <select id="preço" aria-required="">
+                    <option>3500kz</option>
+
+                </select>
+            </div>
+
+            <br><br>
+
+            <input type="submit" value="Comprar" onclick="buy()"/>
+            <a href="./index.html" class="a">voltar</a>
+
+        </form>
 
     </main>
-  
 
-   
-  
+
+
+
 </body>
+
 </html>
