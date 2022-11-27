@@ -132,7 +132,12 @@ form input[type=submit]{
     
 }
 
+.a:hover{
+    letter-spacing: 0.5px;
+    background: linear-gradient(to left, #4776E6, #8e54e9);
 
+
+}
 
 form input[type=submit]:hover{
     letter-spacing: 0.5px;
